@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.Breakpoint.Web", "Lisa.Breakpoint.Web\Lisa.Breakpoint.Web.csproj", "{32301B61-BE48-48BA-B5FD-1F8A8B451105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.Breakpoint.WebApi", "Lisa.Breakpoint.WebApi\Lisa.Breakpoint.WebApi.csproj", "{BA17DC07-E491-49E0-9152-69B8EEF9D409}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Lisa.Breakpoint.Models", "Lisa.Breakpoint.Models\Lisa.Breakpoint.Models.shproj", "{338AC91E-140A-44C1-B48F-3F985E2B958E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7E96C43B-DFA8-47C2-B80F-7AEF9DFC537F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisa.Breakpoint.Access", "Lisa.Breakpoint.Access\Lisa.Breakpoint.Access.csproj", "{00AA908F-B7E5-4241-8408-60C90D05D454}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Lisa.Breakpoint.Models\Lisa.Breakpoint.Models.projitems*{32301b61-be48-48ba-b5fd-1f8a8b451105}*SharedItemsImports = 4
+		Lisa.Breakpoint.Models\Lisa.Breakpoint.Models.projitems*{00aa908f-b7e5-4241-8408-60c90d05d454}*SharedItemsImports = 4
+		Lisa.Breakpoint.Models\Lisa.Breakpoint.Models.projitems*{338ac91e-140a-44c1-b48f-3f985e2b958e}*SharedItemsImports = 13
+		Lisa.Breakpoint.Models\Lisa.Breakpoint.Models.projitems*{ba17dc07-e491-49e0-9152-69b8eef9d409}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32301B61-BE48-48BA-B5FD-1F8A8B451105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32301B61-BE48-48BA-B5FD-1F8A8B451105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32301B61-BE48-48BA-B5FD-1F8A8B451105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32301B61-BE48-48BA-B5FD-1F8A8B451105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA17DC07-E491-49E0-9152-69B8EEF9D409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA17DC07-E491-49E0-9152-69B8EEF9D409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA17DC07-E491-49E0-9152-69B8EEF9D409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA17DC07-E491-49E0-9152-69B8EEF9D409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00AA908F-B7E5-4241-8408-60C90D05D454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00AA908F-B7E5-4241-8408-60C90D05D454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00AA908F-B7E5-4241-8408-60C90D05D454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00AA908F-B7E5-4241-8408-60C90D05D454}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
