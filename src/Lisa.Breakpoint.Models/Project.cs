@@ -19,6 +19,10 @@
 
         public static bool IsInitialized(Project project)
         {
+            if (project == null)
+            {
+                return false;
+            }
             return string.IsNullOrEmpty(project.Name) ? false : true;
         }
     }

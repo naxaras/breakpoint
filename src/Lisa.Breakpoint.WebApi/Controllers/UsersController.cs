@@ -1,13 +1,12 @@
 ﻿using Lisa.Breakpoint.Models;
 using Lisa.Breakpoint.WebApi.Data;
-using System.Linq;
 using System.Web.Http;
 
 namespace Lisa.Breakpoint.WebApi.Controllers
 {
-    public class ProjectsController : ApiController
+    public class UsersController : ApiController
     {
-        public ProjectsController()
+        public UsersController()
         {
             _db = new Context();
         }
@@ -15,7 +14,7 @@ namespace Lisa.Breakpoint.WebApi.Controllers
         [HttpGet]
         public IHttpActionResult Get()
         {
-            return Ok(_db.Projects);
+            return Ok(_db.Users);
         }
 
         [HttpGet]
@@ -24,32 +23,32 @@ namespace Lisa.Breakpoint.WebApi.Controllers
             if (id <= 0)
             {
                 // An Id that is smaller then 1 will never return an item.
-                return BadRequest("Id must be greater that 0.");
+                return BadRequest("Id must be greater the 0");
             }
 
-            var project = _db.Projects.Find(id);
+            var user = _db.Users.Find(id);
 
-            if (project == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return Ok(project);
+            return Ok(user);
         }
 
         [HttpPost]
-        public IHttpActionResult Post([FromBody]Project value)
+        public IHttpActionResult Post([FromBody]User value)
         {
-            if(!Project.IsInitialized(value))
+            if(!Lisa.Breakpoint.Models.User.IsInitialized(value))
             {
-                // The project was not properly initalized.
+                // The user was not properly initalized.
                 return BadRequest("The item was not initialized.");
             }
 
-            _db.Projects.Add(value);
+            _db.Users.Add(value);
             _db.SaveChanges();
 
-            return Created(string.Format("/Projects/{0}", value.Id), value);
+            return Created(string.Format("/Users/{0}", value.Id), value);
         }
 
         private Context _db;
