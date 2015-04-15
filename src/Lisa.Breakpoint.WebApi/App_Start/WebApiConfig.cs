@@ -23,8 +23,12 @@ namespace Lisa.Breakpoint.WebApi
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "{controller}/{id}/{*queryvalues}",
+                defaults: new 
+                { 
+                    id = RouteParameter.Optional, 
+                    queryvalues = RouteParameter.Optional 
+                }
             );
         }
     }

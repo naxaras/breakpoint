@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Lisa.Breakpoint.Models.Collections;
 
 namespace Lisa.Breakpoint.Models
 {

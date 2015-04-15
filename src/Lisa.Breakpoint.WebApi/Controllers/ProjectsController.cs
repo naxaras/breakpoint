@@ -37,6 +37,27 @@ namespace Lisa.Breakpoint.WebApi.Controllers
             return Ok(project);
         }
 
+        [HttpGet]
+        public IHttpActionResult Get(int id, string queryvalues)
+        {
+            if (id <= 0)
+            {
+                // An Id that is smaller then 1 will never return an item.
+                return BadRequest("Id must be greater that 0.");
+            }
+
+            var project = _db.Projects.Find(id);
+
+            if (project == null)
+            {
+                return NotFound();
+            }
+
+            //object t = Utility.ExcecuteQuery(project, queryvalues);
+
+            return Ok(project);
+        }
+
         [HttpPost]
         public IHttpActionResult Post([FromBody]Project value)
         {
